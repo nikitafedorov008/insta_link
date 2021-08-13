@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../database_page.dart';
+import 'database_page.dart';
 
 Widget infoFab(BuildContext context, String buttonName, String businessName, String businessInfo) {
   return FloatingActionButton.extended(

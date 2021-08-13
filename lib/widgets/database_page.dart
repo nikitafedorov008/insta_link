@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'widgets/create_requisition_widget.dart';
-import 'model/form.dart';
-import 'form_controller.dart';
+import 'create_requisition_widget.dart';
+import '../model/form.dart';
+import '../controller/form_controller.dart';
 
 class DatabaseMobileScreen extends StatelessWidget {
   @override

@@ -3,7 +3,7 @@ import 'package:insta_link/config/config.dart';
 import 'dart:js' as js;
 import 'package:line_icons/line_icons.dart';
 
-Widget topBar(List<Widget> tapBarButtons,) {
+Widget topBar(List<Widget> topBarButtons,) {
 
   return AppBar(
     toolbarHeight: 240,
@@ -73,7 +73,7 @@ Widget topBar(List<Widget> tapBarButtons,) {
           children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: tapBarButtons,
+              children: topBarButtons,
             ),
           ],
         ),
@@ -83,7 +83,7 @@ Widget topBar(List<Widget> tapBarButtons,) {
   );
 }
 
-Widget tapBarButton(IconData icon, String title, onPressed){
+Widget topBarButton(IconData icon, String title, onPressed){
   return Padding(
     padding: const EdgeInsets.all(4.0),
     child: Column(
