@@ -1,16 +1,16 @@
 import 'package:date_ranger/date_ranger.dart';
 import 'package:flutter/material.dart';
-import 'database_page.dart';
-import 'model/form.dart';
-import 'form_controller.dart';
+import '../database_page.dart';
+import '../model/form.dart';
+import '../form_controller.dart';
 
-class CreateItemPage extends StatefulWidget {
+class CreateRequisitionWidget extends StatefulWidget {
 
   @override
-  _CreateItemPageState createState() => _CreateItemPageState();
+  _CreateRequisitionWidgetState createState() => _CreateRequisitionWidgetState();
 }
 
-class _CreateItemPageState extends State<CreateItemPage> {
+class _CreateRequisitionWidgetState extends State<CreateRequisitionWidget> {
   // Create a global key that uniquely identifies the Form widget
   // and allows validation of the form.
   //

@@ -3,17 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'dart:js' as js;
 
-class PlaceCard extends StatefulWidget {
+class DialogCard extends StatefulWidget {
   //const PlaceCard({Key? key}) : super(key: key);
-  PlaceCard({this.imageURL, this.title, this.subtitle, this.description, this.link, this.google, this.yandex, this.taxi});
+  DialogCard({this.imageURL, this.title, this.subtitle, this.description, this.link, this.google, this.yandex, this.taxi});
 
   final String imageURL, title, description, subtitle, link, google, yandex, taxi;
 
   @override
-  _PlaceCardState createState() => _PlaceCardState();
+  _DialogCardState createState() => _DialogCardState();
 }
 
-class _PlaceCardState extends State<PlaceCard> {
+class _DialogCardState extends State<DialogCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
