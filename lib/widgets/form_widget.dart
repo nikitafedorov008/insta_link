@@ -4,13 +4,13 @@ import 'database_page.dart';
 import '../model/form.dart';
 import '../controller/form_controller.dart';
 
-class CreateRequisitionWidget extends StatefulWidget {
+class FormWidget extends StatefulWidget {
 
   @override
-  _CreateRequisitionWidgetState createState() => _CreateRequisitionWidgetState();
+  _FormWidgetState createState() => _FormWidgetState();
 }
 
-class _CreateRequisitionWidgetState extends State<CreateRequisitionWidget> {
+class _FormWidgetState extends State<FormWidget> {
   // Create a global key that uniquely identifies the Form widget
   // and allows validation of the form.
   //
@@ -256,5 +256,17 @@ class _CreateRequisitionWidgetState extends State<CreateRequisitionWidget> {
       return MediaQuery.of(context).size.width / 24;
     }
   }
+}
 
+Widget cardForm(BuildContext context) {
+  return Card(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(32.0),
+    ),
+    child: Container(
+      height: 930,
+      width: MediaQuery.of(context).size.width,
+      child: FormWidget(),
+    ),
+  );
 }

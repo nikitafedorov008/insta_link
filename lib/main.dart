@@ -2,6 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_google_maps/flutter_google_maps.dart';
 import 'config/home.dart';
 
+/*
+  _____           _        _      _       _
+ |_   _|         | |      | |    (_)     | |
+   | |  _ __  ___| |_ __ _| |     _ _ __ | | __
+   | | | '_ \/ __| __/ _` | |    | | '_ \| |/ /
+  _| |_| | | \__ \ || (_| | |____| | | | |   <
+ |_____|_| |_|___/\__\__,_|______|_|_| |_|_|\_\
+ */
+
 void main() {
   runApp(MyApp());
 }

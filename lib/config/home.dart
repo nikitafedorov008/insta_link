@@ -6,7 +6,7 @@ import '../functions/open_url.dart';
 import '../widgets/bodyWidget.dart';
 import '../widgets/card_map.dart';
 import '../widgets/card_with_icon.dart';
-import '../widgets/create_requisition_widget.dart';
+import '../widgets/form_widget.dart';
 import '../widgets/info_fab.dart';
 import '../widgets/list_card_landscape.dart';
 import '../widgets/list_card_portrait.dart';
@@ -14,47 +14,79 @@ import '../widgets/section_title.dart';
 import '../widgets/top_bar.dart';
 import 'dart:js' as js;
 
+//This is insta_link main page, where are all the widgets displayed on the screen
 Widget home(BuildContext context, _key) {
   return Scaffold(
+    //top bar with Instagram information and some buttons
     appBar: topBar(<Widget>[
+      //button on the top bar
       topBarButton(
-          Icons.email_outlined,
-          'email',
-              (){
-            copyToClipboard('davranova.yana@yandex.ru');
-          }
+        //button icon
+        Icons.email_outlined,
+        //button title
+        'email',
+        //button on tap action
+        (){
+          //copy to clipboard action
+          copyToClipboard('davranova.yana@yandex.ru');
+        }
       ),
+      //button on the top bar
       topBarButton(
-          Icons.phone_enabled_outlined,
-          'позвонить',
-              (){
-            openUrlNewTab('tel:+79119257931');
-          }
+        //button icon
+        Icons.phone_enabled_outlined,
+        //button title
+        'позвонить',
+        //button on tap action
+        (){
+          //open URL in new tab
+          openUrlNewTab('tel:+79119257931');
+        }
       ),
+      //button on the top bar
       topBarButton(
-          LineIcons.telegram,
-          'telegram',
-              (){
-            //openUrlNewTab('tel:+79119257931');
-          }
+        //button icon
+        LineIcons.telegram,
+        //button title
+        'telegram',
+        //button on tap action
+        (){
+          //open URL in new tab
+          //openUrlNewTab('tel:+79119257931');
+        }
       ),
+      //button on the top bar
       topBarButton(
-          LineIcons.whatSApp,
-          'whatsapp',
-              (){
-            openUrlNewTab('https://api.whatsapp.com/send/?phone=79119257931&text&app_absent=0');
-          }
+        //button icon
+        LineIcons.whatSApp,
+        //button title
+        'whatsapp',
+        //button on tap action
+        (){
+          //open URL in new tab
+          openUrlNewTab('https://api.whatsapp.com/send/?phone=79119257931&text&app_absent=0');
+        }
       ),
     ]),
+    //this is the website body
     body: bodyWidget(<Widget>[
-      sectionTitle('Карта & маршрут'),
+      //title of lower section
+      sectionTitle('Карта & маршрут'/*section name*/),
+      //card with Google Map
       cardMap(context, _key,
+          //coordinates for Map
           59.8261179,30.3450586,
+          //URL for Google Maps button
           'https://goo.gl/maps/7RbmSedmx35sB9U86',
+          //URL for Yandex Maps button
           'https://yandex.ru/maps/-/CCUi4We2XA',
+          //URL for Yandex Taxi button
           'https://3.redirect.appmetrica.yandex.com/route?end-lat=59.833249&end-lon=30.349447&ref=&appmetrica_tracking_id=1178268795219780156'),
+      //title of lower section
       sectionTitle('Популярные маршруты'),
+      //list of portrait cards
       listCardPortrait([
+        //portrait card from list
         {
           'imageURL':'https://upload.wikimedia.org/wikipedia/commons/a/ac/Park_Pobedy_SPB_3.jpg',
           'title':'Парк победы',
@@ -65,6 +97,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi'
         },
+        //portrait card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipN0oODKlAEPu-of7yfhR4vfMN27iV5xc25FsRhi=w464-h260-n-k-no',
           'title':'Люмьер-Холл',
@@ -75,6 +108,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi'
         },
+        //portrait card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipNobsx6BZr9s3QWZIqyL-qydZUKhEeMiKidDu1-=w464-h260-n-k-no',
           'title':'Парк "Россия"',
@@ -85,6 +119,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi'
         },
+        //portrait card from list
         {
           'imageURL':'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRuWo446Y02BaaZd7jMn40WND821MdQTY-kN7eL6ky4MUt6cKnlCJHYaS-gICYr9k--0wTUP2Y0KUItHloaE86pmA',
           'title':'Обсерватория',
@@ -95,6 +130,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi'
         },
+        //portrait card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipO31DuOKcdEUojlZknrCorjJUZVz3RNrr4OhPN7=w426-h240-k-no',
           'title':'Гранд Макет Росси',
@@ -105,6 +141,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi'
         },
+        //portrait card from list
         {
           'imageURL':'https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcQCU-ukakMsgcb_lhRhWojO_xTyLhEMjxIoBAo69G_xCxzadKxIUJGJVIrbR9MdCy5GHOqmBqLCs7J4qmmnQy6eLQ',
           'title':'"Чесменская ерковь',
@@ -116,8 +153,11 @@ Widget home(BuildContext context, _key) {
           'taxi':'taxi'
         },
       ]),
+      //title of lower section
       sectionTitle('Популярные кафе & рестораны'),
+      //list of landscape cards
       listCardLandscape([
+        //landscape card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipNrTYC8ELTncOaLXICedJtWQISy2CNTGUqyM_HR=w408-h276-k-no',
           'title':'Пхали-Хинкали',
@@ -129,6 +169,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi',
         },
+        //landscape card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipNwhzs6JkVgGmjHkrqAUzfzCwIxws9DOfb0pJjv=w408-h272-k-no',
           'title':'PAR',
@@ -140,6 +181,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi',
         },
+        //landscape card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipM-Z89XQXFtCt7bTOh7TDnNb7Dinmo0FPXu7ZUK=w415-h240-k-no',
           'title':'OTTO',
@@ -151,6 +193,7 @@ Widget home(BuildContext context, _key) {
           'yandex':'yandex',
           'taxi':'taxi',
         },
+        //landscape card from list
         {
           'imageURL':'https://lh5.googleusercontent.com/p/AF1QipMMSAO3LdtPJvjk5m20BAk5BD1nZlSlgzQp5tPj=w408-h306-k-no',
           'title':'Лаундж кафе WINGS',
@@ -163,57 +206,92 @@ Widget home(BuildContext context, _key) {
           'taxi':'taxi',
         },
       ]),
+      //title of lower section
       sectionTitle('Другие места'),
+      //card with big icon without image
       cardWithIcon(
+        //icon in the card
         Icon(Icons.airplanemode_on_rounded, color: Colors.purple, size: 32,),
+        //card title
         'Аэропорт Пулково',
+        //card subtitle
         '12 минут на авто до аппартаментов',
-            (){},
+        //card on tap action
+        (){},
       ),
+      //card with big icon without image
       cardWithIcon(
+        //icon in the card
         Icon(Icons.subway, color: Colors.blue, size: 32,),
+        //card title
         'Метро Звездная',
+        //card subtitle
         '5 минут до метро от аппартаментов',
-            (){},
+        //card on tap action
+        (){},
       ),
+      //card with big icon without image
       cardWithIcon(
+        //icon in the card
         Icon(Icons.airport_shuttle_rounded, color: Colors.amber, size: 32,),
+        //card title
         'Автобус',
+        //card subtitle
         'ближайший автобус ходит под номером 141',
-            (){},
+        //card on tap action
+        (){},
       ),
+      //card with big icon without image
       cardWithIcon(
+        //icon in the card
         Icon(Icons.add_road_rounded, color: Colors.red, size: 32,),
+        //card title
         'КАД',
+        //card subtitle
         '7 минут до КАДа на автомобиле',
-            (){},
+        //card on tap action
+        (){},
       ),
+      //title of lower section
       sectionTitle('Бронирование'),
+      //card with big icon without image
       cardWithIcon(
+        //icon in the card
         Icon(LineIcons.airbnb, color: Colors.red, size: 32,),
+        //card title
         'Зарброниовать на Airbnb',
+        //card subtitle
         'просто кликните сюда',
-            (){js.context.callMethod('open', ['https://abnb.me/dIBscInhshb']);},
+        //card on tap action
+        (){
+          //open URL in new browser tab
+          openUrlNewTab('https://abnb.me/dIBscInhshb');
+        },
       ),
+      //card with big icon without image
       cardWithIcon(
+        //icon in the card
         Icon(EvaIcons.book, color: Colors.blue, size: 32,),
+        //card title
         'Зарброниовать на Booking.com',
+        //card subtitle
         'Оценка - 9,8 💣',
-            (){js.context.callMethod('open', ['http://www.booking.com/Share-zPPvvK']);},
+        //card on tap action
+        (){
+          //open URL in new browser tab
+          openUrlNewTab('http://www.booking.com/Share-zPPvvK');
+        },
       ),
-      Card(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(32.0),
-        ),
-        child: Container(
-          height: 930,
-          width: MediaQuery.of(context).size.width,
-          child: CreateRequisitionWidget(),
-        ),
-      ),
+      //card with requisition form
+      cardForm(context),
     ],),
+      //floating action button with business information
       floatingActionButton: infoFab(context,
-        'доп. информация', 'ИП Давранова Яна Алефтиновна',
+        //text on the button
+        'доп. информация',
+        //name of the business
+        'ИП Давранова Яна Алефтиновна',
+        //information about business
         'ОГРНИП 318784700371421\nИНН 780217152633\nтелефон +7 911 925-79-31',
       ),
   );

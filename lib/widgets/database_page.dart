@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'create_requisition_widget.dart';
+import 'form_widget.dart';
 import '../model/form.dart';
 import '../controller/form_controller.dart';
 
@@ -56,7 +56,7 @@ class _DatabasePageMobileState extends State<DatabasePageMobile> {
               Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CreateRequisitionWidget(),
+                    builder: (context) => FormWidget(),
                   )
               );
             },
