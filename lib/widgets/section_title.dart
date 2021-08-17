@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+//lower section naming widget
 Widget sectionTitle(String title) {
   return Padding(
     padding: const EdgeInsets.all(8.0),

@@ -28,6 +28,8 @@ class MyApp extends StatelessWidget {
   }
 }
 
+//main page class for home.dart
+// do not change something here if you need to add or delete widgets in web page, use home.dart to do it
 class MainPage extends StatefulWidget {
   MainPage({Key key, this.title}) : super(key: key);
 
@@ -39,7 +41,6 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage> {
   GlobalKey<GoogleMapStateBase> _key = GlobalKey<GoogleMapStateBase>();
-
   @override
   Widget build(BuildContext context) {
     return home(context, _key);

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'card_landscape.dart';
 
+//widget with list of landscape cards
 Widget listCardLandscape(List<Map<String, dynamic>> data){
   return SizedBox(
     height: 100.0,

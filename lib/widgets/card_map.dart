@@ -4,6 +4,7 @@ import 'package:flutter_google_maps/flutter_google_maps.dart';
 import 'package:insta_link/functions/open_url.dart';
 import 'package:line_icons/line_icons.dart';
 
+//card widget with GoogleMaps and GoogleMaps button, YandexMaps button, YandexTaxi button
 Widget cardMap(BuildContext context, GlobalKey<GoogleMapStateBase> _key, double lat, double lng, String googleMapsURL, String yandexMapsURL, String yandexTaxiURL) {
   return SizedBox(
     height: 240.0,

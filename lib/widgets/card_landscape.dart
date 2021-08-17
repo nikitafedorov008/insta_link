@@ -1,22 +1,14 @@
 import 'package:flutter/material.dart';
-
 import 'dialog_card.dart';
 
+//big landscape card with image
 Widget cardLandscape(BuildContext context, String imageURL, String title, String subtitle, String description, String address, String link, String google, String yandex, String taxi,) {
   return Padding(
     padding: const EdgeInsets.all(2.0),
     child: GestureDetector(
       onTap: () {
         //js.context.callMethod('open', [link]);
-        showDialog(
-            context: context,
-            builder: (BuildContext context) {
-              return Dialog(
-                backgroundColor: Colors.transparent,
-                child: DialogCard(imageURL: imageURL, title: title, subtitle: subtitle, description: description, link: link, google: google, yandex: yandex, taxi: taxi,),
-              );
-            }
-        );
+        dialogCardWidget(context, imageURL, title, subtitle, description, link, google, yandex, taxi,);
       },
       child: Card(
         elevation: 4,

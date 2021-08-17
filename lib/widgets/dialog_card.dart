@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'dart:js' as js;
 
+//dialog body for portrait and landscape cards
 class DialogCard extends StatefulWidget {
   //const PlaceCard({Key? key}) : super(key: key);
   DialogCard({this.imageURL, this.title, this.subtitle, this.description, this.link, this.google, this.yandex, this.taxi});
-
   final String imageURL, title, description, subtitle, link, google, yandex, taxi;
 
   @override
   _DialogCardState createState() => _DialogCardState();
 }
 
+//
 class _DialogCardState extends State<DialogCard> {
   @override
   Widget build(BuildContext context) {
@@ -192,4 +193,16 @@ class _DialogCardState extends State<DialogCard> {
       ),
     );
   }
+}
+
+Widget dialogCardWidget(BuildContext context, String imageURL, String title, String subtitle, String description, String link, String google, String yandex, String taxi) {
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: Colors.transparent,
+          child: DialogCard(imageURL: imageURL, title: title, subtitle: subtitle, description: description, link: link, google: google, yandex: yandex, taxi: taxi,),
+        );
+      }
+  );
 }

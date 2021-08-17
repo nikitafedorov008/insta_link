@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'database_page.dart';
 
+//floating action button widget with some information about business
 Widget infoFab(BuildContext context, String buttonName, String businessName, String businessInfo) {
   return FloatingActionButton.extended(
     backgroundColor: Colors.pinkAccent,
@@ -15,7 +16,7 @@ Widget infoFab(BuildContext context, String buttonName, String businessName, Str
             title: Text(businessName),
             content: Text(businessInfo),
             actions: [
-              TextButton(
+              /*TextButton(
                 child: Text('admin', style: TextStyle(color: Colors.black12),),
                 onPressed: () {
                   Navigator.push(
@@ -23,7 +24,7 @@ Widget infoFab(BuildContext context, String buttonName, String businessName, Str
                     MaterialPageRoute(builder: (context) => DatabaseMobileScreen()),
                   );
                 },
-              ),
+              ),*/
               FlatButton(
                 child: new Text("OK"),
                 onPressed: () {

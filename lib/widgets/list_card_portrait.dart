@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'card_portrait.dart';
 
+//widget with list of portrait cards
 Widget listCardPortrait(List<Map<String, dynamic>> data){
   return SizedBox(
     height: 186.0,

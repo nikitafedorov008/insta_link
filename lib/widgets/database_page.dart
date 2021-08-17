@@ -3,6 +3,7 @@ import 'form_widget.dart';
 import '../model/form.dart';
 import '../controller/form_controller.dart';
 
+//page with requisitions database (only for admin)
 class DatabaseMobileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

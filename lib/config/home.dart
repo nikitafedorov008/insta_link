@@ -15,7 +15,7 @@ import '../widgets/top_bar.dart';
 import 'dart:js' as js;
 
 //This is insta_link main page, where are all the widgets displayed on the screen
-Widget home(BuildContext context, _key) {
+home(BuildContext context, _key) {
   return Scaffold(
     //top bar with Instagram information and some buttons
     appBar: topBar(<Widget>[

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:insta_link/config/config.dart';
-import 'dart:js' as js;
-import 'package:line_icons/line_icons.dart';
 
+//bar widget on top of the website
 Widget topBar(List<Widget> topBarButtons,) {
-
   return AppBar(
     toolbarHeight: 240,
     centerTitle: true,
@@ -45,14 +43,6 @@ Widget topBar(List<Widget> topBarButtons,) {
         ),
       ),
     ),
-    /*
-        actions: [
-          IconButton(
-            icon: Icon(Icons.settings),
-            onPressed: () {},
-          )
-        ],
-        */
     flexibleSpace: Container(
       decoration: BoxDecoration(
         gradient: LinearGradient(
@@ -83,6 +73,7 @@ Widget topBar(List<Widget> topBarButtons,) {
   );
 }
 
+//button for bar widget on top
 Widget topBarButton(IconData icon, String title, onPressed){
   return Padding(
     padding: const EdgeInsets.all(4.0),

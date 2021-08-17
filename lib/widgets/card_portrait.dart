@@ -1,40 +1,12 @@
 import 'package:flutter/material.dart';
-
 import 'dialog_card.dart';
 
+//big portrait card with image
 Widget cardPortrait(BuildContext context, String imageURL, String title, String subtitle, String description, String link, String google, String yandex, String taxi) {
   return GestureDetector(
     onTap: () {
       //js.context.callMethod('open', [link]);
-      showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return Dialog(
-              backgroundColor: Colors.transparent,
-              child: DialogCard(imageURL: imageURL, title: title, subtitle: subtitle, description: description, link: link, google: google, yandex: yandex, taxi: taxi,),
-            );
-          }
-      );
-      /*
-        showDialog(
-          context: context,
-          builder: (BuildContext context) {
-            return Dialog(
-              child: EasyWebView(
-                src: link,
-                isHtml: false, // Use Html syntax
-                isMarkdown: false, // Use markdown syntax
-                convertToWidgets: false,
-                widgetsTextSelectable: false,
-                webAllowFullScreen: false,
-                onLoaded: () {
-                  print('$title: Loaded: $link');
-                },
-              ),
-            );
-          },
-        );
-        */
+      dialogCardWidget(context, imageURL, title, subtitle, description, link, google, yandex, taxi,);
     },
     child: Card(
       elevation: 4,

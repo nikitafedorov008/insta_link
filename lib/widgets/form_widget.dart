@@ -46,14 +46,14 @@ class _FormWidgetState extends State<FormWidget> {
 
       FormController formController = FormController();
 
-      _showSnackbar("Submitting Feedback");
+      _showSnackbar("Submitting requisition");
 
       // Submit 'feedbackForm' and save it in Google Sheets.
       formController.submitForm(feedbackForm, (String response) {
         print("Response: $response");
         if (response == FormController.STATUS_SUCCESS) {
           // Feedback is saved succesfully in Google Sheets.
-          _showSnackbar("Feedback Submitted");
+          _showSnackbar("Кequisition Submitted");
         } else {
           // Error Occurred while saving data in Google Sheets.
           _showSnackbar("Error Occurred!");
@@ -169,7 +169,7 @@ class _FormWidgetState extends State<FormWidget> {
                                           borderRadius: BorderRadius.circular(8.0),
                                           borderSide: new BorderSide(color: Colors.grey[200]),
                                         ),
-                                        labelText: 'Phone \ Whatsapp \ Telegram',
+                                        labelText: 'Phone / Whatsapp / Telegram',
                                         prefixIcon: Icon(Icons.phone),
                                       ),
                                     ),
@@ -201,6 +201,7 @@ class _FormWidgetState extends State<FormWidget> {
                                       ),
                                     ),
                                   ),
+                                  //date ranger section
                                   Padding(
                                     padding: const EdgeInsets.only(top: 8.0),
                                     child: DateRanger(
@@ -235,6 +236,7 @@ class _FormWidgetState extends State<FormWidget> {
     );
   }
 
+  //card with text form widget
   responsiveHeight(orientation, constraints) {
     //double breakpointWidth = orientation == Orientation.portrait ? 200 : 400;
     double breakpointWidth = orientation == Orientation.portrait ? 600 : 800;
