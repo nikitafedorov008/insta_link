@@ -3,7 +3,7 @@
 
 open source alternative to taplink 
 
-![Logo]<img src="images/instalinklogo.png">
+<img src="images/instalinklogo.png">
     
 ## Installation
 
@@ -185,7 +185,7 @@ Takes two numbers and returns the sum.
   
 ## Useful links
 
- - [Генератор ссылок на Yandex GO Taxi](https://yandex.ru/dev/taxi/widgets/)
+ - [Yandex GO Taxi Link Generator](https://yandex.ru/dev/taxi/widgets/)
  - [Awesome README](https://github.com/matiassingers/awesome-readme)
  - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
 
@@ -360,9 +360,8 @@ Answer 2
   
 ## Features
 
-- Light/dark mode toggle
 - Live previews
-- Fullscreen mode
+- Ad
 - Cross platform
 
   

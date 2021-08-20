@@ -37,6 +37,8 @@ dependencies:
   easy_web_view:
   insta_public_api:
   http:
+  flutter2web: any
+
 
 dev_dependencies:
   flutter_test:
