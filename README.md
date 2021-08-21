@@ -1,10 +1,10 @@
 
 # InstaLink
 
-open source alternative to taplink 
+open source web page template for instagram bio
 
 <img src="images/instalinklogo.png">
-    
+
 ## Installation
 
 Install insta_link with git
@@ -23,31 +23,16 @@ write here your Google's sheet id on lines 3 and 36
   var sheet = SpreadsheetApp.openById("paste your google sheet id here");
 ```
 
+go to **lib\config\config.dart** and paste your instagram data
 
-
-## API Reference
-
-#### Get all items
-
-```http
-  GET /api/items
+```dart
+//copy the URL from your instagram photo and paste here
+final String instagramPhotoUrl = 'paste here your instagram profile photo url';
+//copy the your instagram profile name and paste here
+final String instagramProfileName = 'paste here your instagram profile name';
+//copy the URL from your instagram photo and paste here
+final String instagramProfileTitle = 'paste here your instagram profile title or write some tagline';
 ```
-
-| Parameter | Type     | Description                |
-| :-------- | :------- | :------------------------- |
-| `api_key` | `string` | **Required**. Your API key |
-
-#### Get item
-
-```http
-  GET /api/items/${id}
-```
-
-| Parameter | Type     | Description                       |
-| :-------- | :------- | :-------------------------------- |
-| `id`      | `string` | **Required**. Id of item to fetch |
-
-#### add(num1, num2)
 
 ## Functions
 
@@ -58,6 +43,8 @@ write here your Google's sheet id on lines 3 and 36
 | `openUrlNewTab`        | **string** - url  | Open URL in the new browser tab  |
 
 ## Widgets
+
+For making links to yandex taxi use this [link](https://yandex.ru/dev/taxi/widgets/)
 
 #### topBar
 
@@ -182,26 +169,13 @@ card with requisition form
 
 Takes two numbers and returns the sum.
 
-  
+
 ## Useful links
 
- - [Yandex GO Taxi Link Generator](https://yandex.ru/dev/taxi/widgets/)
- - [Awesome README](https://github.com/matiassingers/awesome-readme)
- - [How to write a Good readme](https://bulldogjob.com/news/449-how-to-write-a-good-readme-for-your-github-project)
+- [Yandex GO Taxi Link Generator](https://yandex.ru/dev/taxi/widgets/)
+- [Ubder link maker](https://www.uber.com/ee/ru/ride/)
 
-  
 ## Usage/Examples
-
-**lib\config\config.dart**
-
-```dart
-//copy the URL from your instagram photo and paste here
-final String instagramPhotoUrl = 'https://cf.bstatic.com/xdata/images/hotel/max1024x768/281601248.jpg?k=222547ea22eca07e2e401238a89361e1181b4db0350d8b359f596d4872e6e4ca&o=&hp=1';
-//copy the your instagram profile name and paste here
-final String instagramProfileName = 'apartzvezdnaya';
-//copy the URL from your instagram photo and paste here
-final String instagramProfileTitle = 'Наши гости чувствуют себя как дома, только ЛУЧШЕ!';
-```
 
 **lib\config\home.dart**
 
@@ -316,134 +290,97 @@ home(BuildContext context, _key) {
 }
 ```
 
-  
+
 ## Tech Stack
 
 **Client:** Dart (Flutter)
-
 **Server:** Google Apps Script
 
-  
-## Appendix
-
-Any additional information goes here
-
-  
-## Contributing
-
-Contributions are always welcome!
-
-See `contributing.md` for ways to get started.
-
-Please adhere to this project's `code of conduct`.
-
-  
-## Environment Variables
-
-To run this project, you will need to add the following environment variables to your .env file
-
-`API_KEY`
-
-`ANOTHER_API_KEY`
-
-  
-## FAQ
-
-#### Question 1
-
-Answer 1
-
-#### Question 2
-
-Answer 2
-
-  
 ## Features
 
-- Live previews
-- Ad
-- Cross platform
+- Google Maps support
+- Google Sheet data support
 
-  
 ## Feedback
 
 If you have any feedback, please reach out to me at nikitafedorov008@gmail.com
 
-  
+
 ## Lessons Learned
 
 What did you learn while building this project? What challenges did you face and how did you overcome them?
 
-  
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
 
-  
-## Optimizations
-
-What optimizations did you make in your code? E.g. refactors, performance improvements, accessibility
-
-  
 ## Roadmap
 
 - Additional browser support
 
 - Add more integrations
 
-  
-## Run Locally
-## How To Use
+- Yandex taxi integration
 
-Clone the project
+## Hosting
+
+#### free using GitHub Pages
+
+create web build
 
 ```bash
-  git clone https://link-to-project
+  flutter build web --release
+```
+
+create new git
+
+```bash
+  git init <project directory>\insta_link\build\web
 ```
 
 Go to the project directory
 
 ```bash
-  cd my-project
+  git add build\web
 ```
 
-Open project in IDE (Intellij IDEA/ VS code)
+change "/" to your repo name
+
+#### build\web\index.html
 
 ```bash
-  cd my-project
+<base href="paste here your repo name">
 ```
 
-
-Install dependencies
+or
 
 ```bash
-  npm install
+  git add --all 
 ```
 
-
-Install dependencies
+commit and push
 
 ```bash
-  npm install
+  git commit
+  git push
 ```
 
-Start the server
+after go to your github repo open settings => pages
+choose master branch as a source
 
-```bash
-  npm run start
-```
+repo [example](https://github.com/nikitafedorov008/insta_link_example) and  webpage [example](https://nikitafedorov008.github.io/insta_link_example/#/)
 
-  
 ## Screenshots
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
 
-  
+
 ## Author
 
 - [@nikitafedorov008](https://www.github.com/nikitafedorov008)
 
-  
+
 ## Support
 
 For support, email nikitafedorov008@gmail.com or telegram @nikitafedorov008.
